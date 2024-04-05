@@ -1,0 +1,14 @@
+nginxApp:
+  replicas: 6
+  deploymentName: nginx-app
+  containerName: nginx
+  image:
+    repository: us-central1-docker.pkg.dev/genuine-plate-417822/my-artifact-repo/newnewimage
+    tag: "v3"
+  containerPortName: http
+  containerPortNumber: 80
+  containerTargetPortNumber: 80
+
+serviceAccountName: nginx-sa
+
+serviceName: nginx-svc
